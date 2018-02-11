@@ -1,3 +1,11 @@
+<style>
+span.app-name {
+    font-family: "Hoefler Text", Helvetica, sans-serif;
+    font-size: 40px;
+    font-style: italic;
+}
+</style>
+
 <div class="main" role="main">
   <div class="container">
 
@@ -24,19 +32,21 @@
 
           <p class="marketing-desc">{{ site.marketing_desc }}</p>
           <div class="download-buttons">
-            <a
-              class="download-btn btn btn-lg"
-              href="https://itunes.apple.com/app/id{{ site.app.ios_id }}?mt=8&at={% include apple-affiliate.html %}">
-              <i class="fa fa-apple fa-lg" aria-hidden="true"></i> App Store
-            </a>
+            <div style="position:absolute; left:120px">
+              <a
+                class="download-btn btn btn-lg"
+                href="https://itunes.apple.com/app/id{{ site.app.ios_id }}?mt=8&at={% include apple-affiliate.html %}">
+                <i class="fa fa-apple fa-lg" aria-hidden="true"></i> App Store
+              </a>
 
-            {% if site.app.android_id %}
-            <a
-              class="download-btn btn btn-lg"
-              href="https://play.google.com/store/apps/details?id={{ site.app.android_id }}">
-              <i class="fa fa-android fa-lg" aria-hidden="true"></i> Google Play
-            </a>
-            {% endif %}
+              {% if site.app.android_id %}
+              <a
+                class="download-btn btn btn-lg"
+                href="https://play.google.com/store/apps/details?id={{ site.app.android_id }}">
+                <i class="fa fa-android fa-lg" aria-hidden="true"></i> Google Play
+              </a>
+              {% endif %}
+            </div>
           </div>
         </div>
       </div>
